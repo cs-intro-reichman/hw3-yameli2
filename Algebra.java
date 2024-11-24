@@ -99,6 +99,8 @@ public class Algebra {
 
 	// Returns x1 % x2
 	public static int mod(int x1, int x2) {
+		if(x1 <=0 || x2 <=0)
+		return 0;
 		int res=x1;
 		while(res>x2)
 		{
@@ -112,7 +114,7 @@ public class Algebra {
 	// Returns the integer part of sqrt(x) 
 	public static int sqrt(int x) {
 		if(x<=0)
-		return x;
+		return 0;
 		int i =1;
 		int num=x;
 		while (i<x && num > i)
