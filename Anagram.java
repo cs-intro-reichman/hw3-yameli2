@@ -18,7 +18,7 @@ public class Anagram {
 		String str = "1234567";
 		Boolean pass = true;
 		//// 10 can be changed to much larger values, like 1000
-		for (int i = 0; i < 2; i++) {
+		for (int i = 0; i < 10; i++) {
 			String randomAnagram = randomAnagram(str);
 			System.out.println(randomAnagram);
 			pass = pass && isAnagram(str, randomAnagram);
@@ -55,7 +55,29 @@ public class Anagram {
 			return check;
 		}
 		return false;
+		//else{
+		//	for(int i=0;i<str1.length();i++)
+		//	{
+				//if(str1.charAt(i)!=' ')
+				//{
+				//for(int j=0;j<str2.length();j++)
+				//{
+				//	if(str2.charAt(j)!=' '){
+				//		if(str1.charAt(i)==str2.charAt(j))
+				//		{
+				//			j=str2.length();
+				//			check=true;
+				//		}
+				//		else check=false;
+				//	}	
+				//}
+			  //  }
+			//}
+			//return check;
 		}
+		
+	
+	
 			
 	
 		
@@ -77,27 +99,38 @@ public class Anagram {
 	} 
 	return "";
 }
-	   
+
+
+public static String preProcessWithSpaces(String str) {
+	if(str!=""){
+	str=str.toLowerCase();
+	String newstr="";
+	for(int i=0;i<str.length();i++)
+	{
+		if(str.charAt(i)>=97&&str.charAt(i)<=122||str.charAt(i)==' ')
+		newstr+= str.charAt(i);
+	}
+	return newstr;	
+} 
+return "";
+}
 	// Returns a random anagram of the given string. The random anagram consists of the same
 	// characters as the given string, re-arranged in a random order. 
-	public static String randomAnagram(String str) {
-		String newStr="";
-		if(str!="")
+	public static String randomAnagram(String str)
 	{
-		//for(int i=0;i<str.length()-1;i++){
-				
-				for(int j=0;j<str.length();j++){
-					int x= ((int)Math.random()*(str.length()-j));
-					newStr+=str.charAt(x+j);
-				}
-				
-			    
-				if(isAnagram(str, newStr))
-				return newStr;
-		}
-		return "";
-	}
+        String newStr="";
+        if(str!="")
+    {
+        for(int i=0;i<str.length();i++){
+                double x= (Math.random()*(str.length()-1));
+                newStr+=str.charAt((int)x);
+                }
+                return newStr;
+        }
+        return "";
+    }
 }
+
 	
 	
 
