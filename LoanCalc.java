@@ -20,7 +20,7 @@ public class LoanCalc {
 		System.out.println("number of iterations: " + iterationCounter);
 
 		// Computes the periodical payment using bisection search
-		System.out.print(n+"Periodical payment, using bi-section search:");
+		System.out.print(n+"Periodical payment, using bi-section search: ");
 		System.out.println((int) bisectionSolver(loan, rate, n, epsilon));
 		System.out.println("number of iterations: " + iterationCounter);
 	}
@@ -59,7 +59,7 @@ public class LoanCalc {
 	// Side effect: modifies the class variable iterationCounter.
 	public static double bisectionSolver(double loan, double rate, int n, double epsilon) {
         iterationCounter = 0;
-        double L = 0.0;  
+        double L = 1.0;  
         double H = loan;  
         double G = (L + H) / 2.0;  
 
@@ -75,6 +75,6 @@ public class LoanCalc {
             iterationCounter++;
         }
         return G;  
-    }
+    }	
 }
   
