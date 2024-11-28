@@ -92,15 +92,15 @@ public class Algebra {
 				int num1=0;
 				for(int i=x1;i<0;i++)
 				{
-					num1=i;
+					num1++;
 				}
 				int num2=0;
 				for(int j=x2;j<0;j++)
 				{
-					num2=j;
+					num2++;
 				}
 				int num3=num2;
-				for(int i=1;i<num1;i++)
+				for(int t=1;t<num1;t++)
 			 {
 			    num2=Algebra.plus(num2,num3);
 		     }
@@ -109,14 +109,14 @@ public class Algebra {
 			if(x1<0){
 					int num =x1;
 				for(int i=1;i<x2;i++){
-					x1=Algebra.minus(x1,num);
+					x1=Algebra.plus(x1,num);
 				}
 				return x1;
 				}
 			else{
 					int num =x2;
 				for(int i=1;i<x1;i++){
-					x2=Algebra.minus(x2,num);
+					x2=Algebra.plus(x2,num);
 				}
 				return x2;
 				}
@@ -139,7 +139,7 @@ public class Algebra {
 			if(x<0&& Algebra.mod(n, 2)==0)
 			{
 				for(int i=x;i<0;i++){
-					num=i;
+					num++;
 				}
 				res=num;
 				for(int j=0;j<n;j++){
