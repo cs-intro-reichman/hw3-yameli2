@@ -136,7 +136,8 @@ public class Algebra {
 		return 1;
 		int res=x;
 		int num=0;
-			if(x<0&& Algebra.mod(n, 2)==0){
+			if(x<0&& Algebra.mod(n, 2)==0)
+			{
 				for(int i=x;i<0;i++){
 					num=i;
 				}
