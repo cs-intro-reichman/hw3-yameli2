@@ -34,14 +34,6 @@ public class LoanCalc {
         }
         return remainingBalance;
     }
-	//private static double endBalance(double loan, double rate, int n, double payment) {	
-	//	double remainingBalance=loan;
-	//		for(int i=0;i<n;i++)
-	//	{
-	//		remainingBalance=(remainingBalance-payment)*(1.0+(rate/100.0));
-	//	}
-	//	return remainingBalance;		
-	//}
 	
 	// Uses sequential search to compute an approximation of the periodical payment
 	// that will bring the ending balance of a loan close to 0.
@@ -57,15 +49,7 @@ public class LoanCalc {
         }
         return payment;
     }
-	//public static double bruteForceSolver(double loan, double rate, int n, double epsilon) {
-	//	iterationCounter=0;
-	//		double payment=loan/n;
-	//		while (endBalance(loan,rate,n,payment)>0) {
-	//			payment+=epsilon;
-	//			iterationCounter++;
-	//		}
-	//	return payment;
-	//	}
+	
    
 		
     // Uses bisection search to compute an approximation of the periodical payment 
@@ -93,24 +77,4 @@ public class LoanCalc {
         return G;  
     }
 }
-   // public static double bisectionSolver(double loan, double rate, int n, double epsilon) {  
-	//	iterationCounter=0; 
-	//		double H=loan;
-	//	    double L=0.0;
-	//	    double G= (L+H)/2.0;
-	//		while (Math.abs(H-L)>epsilon) 
-	//		{
-	//		 if((endBalance(loan, rate, n, G))*(endBalance(loan, rate, n, L))>0) {
-	//		L=G;
-	//		}
-	//		else{  
-	//		H=G;
-	//		}
-	//		G=(L+H)/2.0;
-	//		iterationCounter++;
-	//	    }
-	//		return G;
-	//		}
-//}		
-	
-    
+  
