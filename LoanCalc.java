@@ -25,6 +25,7 @@ public class LoanCalc {
 		System.out.println("number of iterations: " + iterationCounter);
 	}
 
+	
 	// Computes the ending balance of a loan, given the loan amount, the periodical
 	// interest rate (as a percentage), the number of periods (n), and the periodical payment.
 	private static double endBalance(double loan, double rate, int n, double payment) {    
@@ -33,7 +34,7 @@ public class LoanCalc {
             remainingBalance = (remainingBalance - payment) * (1.0 + (rate / 100.0));  
         }
         return remainingBalance;
-    }
+   }
 	
 	// Uses sequential search to compute an approximation of the periodical payment
 	// that will bring the ending balance of a loan close to 0.
@@ -51,12 +52,12 @@ public class LoanCalc {
     }
 	
    
-		
-    // Uses bisection search to compute an approximation of the periodical payment 
+	 // Uses bisection search to compute an approximation of the periodical payment 
 	// that will bring the ending balance of a loan close to 0.
 	// Given: the sum of the loan, the periodical interest rate (as a percentage),
 	// the number of periods (n), and epsilon, the approximation's accuracy
 	// Side effect: modifies the class variable iterationCounter.
+    
 	public static double bisectionSolver(double loan, double rate, int n, double epsilon) {
         iterationCounter = 0;
         double L = 1.0;  
@@ -77,4 +78,3 @@ public class LoanCalc {
         return G;  
     }	
 }
-  
